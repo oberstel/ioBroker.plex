@@ -1,6 +1,6 @@
 {
-  "_from": "iobroker.plex@0.8.11",
-  "_id": "iobroker.plex@0.8.11",
+  "_from": "iobroker.plex@0.9.2",
+  "_id": "iobroker.plex@0.9.2",
   "_inBundle": false,
   "_integrity": "sha512-IvzLVpd1CHQRVI65Nog9rwRfb0mfLYMbS6yrQfd0L435hajWjx3eG3Cf+SW2e3Dj4ZEewQiPp8UuJ/VOipm/iA==",
   "_location": "/iobroker.plex",
@@ -10,12 +10,12 @@
   "_requested": {
     "type": "version",
     "registry": true,
-    "raw": "iobroker.plex@0.8.11",
+    "raw": "iobroker.plex@0.9.2",
     "name": "iobroker.plex",
     "escapedName": "iobroker.plex",
-    "rawSpec": "0.8.11",
+    "rawSpec": "0.9.2",
     "saveSpec": null,
-    "fetchSpec": "0.8.11"
+    "fetchSpec": "0.9.2"
   },
   "_requiredBy": [
     "#USER",
