@@ -31,7 +31,8 @@ let library;
 let unloaded;
 let retryCycle, refreshCycle;
 
-let encryptionKey;
+let encryptionKey;dd
+
 let plex, plexAuth, tautulli, data;
 let players = [], playing = [], streams = 0;
 let history = [];
@@ -596,6 +597,7 @@ function readData(key, data, prefix, properties)
 				{
 					'node': key,
 					'role': 'channel',
+					'type': 'channel',
 					'description': RegExp('\.[0-9]{3}$').test(key.substr(-4)) ? 'Index ' + key.substr(key.lastIndexOf('.')+1) : library.ucFirst(key.substr(key.lastIndexOf('.')+1).replace('Tree', '')) + ' Information'
 				},
 				'',
@@ -615,6 +617,7 @@ function readData(key, data, prefix, properties)
 						library.set({
 							'node': key + '.' + (Array.isArray(data[nestedKey]) ? nestedKey + 'Tree' : indexKey) + '._data',
 							'role': 'json',
+							'type': 'meta',
 							'description': 'Data of this folder in JSON format'}, JSON.stringify(data[nestedKey]), properties);
 					}
 					
@@ -1092,7 +1095,7 @@ function getPlayers()
 			library.set({node: '_playing.' + groupBy, role: 'channel', description: 'Player ' + player.name}, '');
 			
 			// add player controls
-			library.set({'node': '_playing.' + groupBy + '.Player.localaddress', ...library.getNode('playing.player.localaddress') }, player.address);
+			library.set({'node': '_playing.' + groupBy + '.Player.localAddress', ...library.getNode('playing.player.localAddress') }, player.address);
 			library.set({'node': '_playing.' + groupBy + '.Player.port', ...library.getNode('playing.player.port') }, player.port);
 			
 			let controls = '_playing.' + groupBy + '._Controls';
