@@ -31,7 +31,7 @@ let library;
 let unloaded;
 let retryCycle, refreshCycle;
 
-let encryptionKey;dd
+let encryptionKey;
 
 let plex, plexAuth, tautulli, data;
 let players = [], playing = [], streams = 0;
